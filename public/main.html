@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Garden</title>
+    <link
+      rel="shortcut icon"
+      href="icons8-garden-48.png"
+      type="image/x-icon"
+    />
+    <link
+      href="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/lobipanel/lobipanel.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/pace/flash.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/themify-icons/themify-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Style layout -->
+    <link
+      href="assets/dist/css/stylecrm.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Style layout -->
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <!-- preloader -->
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    <!-- Close preloader -->
+
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="main.html" class="logo">
+          <!-- Logo -->
+          <span class="logo-mini">
+            <img src="icons8-garden-48.png" alt="" />
+          </span>
+          <span class="logo-lg">
+            <img src="https://img.icons8.com/fluent/48/000000/garden.png"/><i
+              class="logo-text"
+              >Smart Garden</i
+            >
+          </span>
+        </a>
+        <!-- navbar menu -->
+        <nav class="navbar navbar-static-top">
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <!-- Sidebar toggle button-->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="pe-7s-angle-left-circle"></span>
+         </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown dropdown-user">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img
+                    src="https://img.icons8.com/fluent/48/000000/user-male-circle.png"
+                /></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="index.html">
+                      <i class="fa fa-sign-out" onclick="signOut();"></i>
+                      Signout</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ======================================================== -->
+      <aside class="main-sidebar">
+        <div class="sidebar">
+          <ul class="sidebar-menu">
+            <!-- active -->
+            <li class="active">
+              <a href="main.html"
+                ><img
+                  src="https://img.icons8.com/fluent/26/000000/control-panel.png"
+                /><span> DASHBOARD</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+            <!-- ============ -->
+            <li class="treeview">
+              <a href="#">
+                <img
+                  src="https://img.icons8.com/fluent/26/000000/doughnut-chart.png"
+                /><span> Biểu đồ</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="real_temp.html">Temperature - Humidity</a></li> 
+                <li><a href="real_moisture.html">Moisture</a></li> 
+              </ul>
+            </li>
+            <!-- =============== -->
+            <li class="treeview">
+              <a href="#">
+                <img
+                  src="https://img.icons8.com/dusk/26/000000/data-sheet.png"
+                /><span> Bảng dữ liệu</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="table_temp.html">Temperature - Humidity</a></li>
+                <li><a href="table_moisture.html">Moisture</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- ==================== -->
+      <div class="content-wrapper">
+        <div class="content">
+          <div class="featured">
+            <div class="featured-item">
+              <a
+                id="openModal"
+                href="#status"
+                onclick="openCl(1)"
+                title="Device status"
+              >
+                <div class="box-df">
+                  <div class="icon">
+                    <img
+                      src="https://img.icons8.com/fluent/48/000000/high-connection.png"
+                    />
+                  </div>
+                  <p>Device</p>
+                </div>
+              </a>
+            </div>
+            <div class="featured-item">
+              <a href="#pk" onclick="openCl(2)" title="Phòng Khách">
+                <div class="box-df">
+                  <div class="icon">
+                    <img
+                  src="https://img.icons8.com/color/64/000000/light-on--v1.png"
+                  width="64px"
+                  height="64px"
+                />
+                  </div>
+                  Đèn
+                </div>
+              </a>
+            </div>
+            <div class="featured-item">
+              <a href="#ps" title="Phòng ngủ" onclick="openCl(3)">
+                <div class="box-df">
+                  <div class="icon">
+                    <img
+                      src="watering-plants.png" width="64px" height="64px"
+                    />
+                  </div>
+                  <P style="width:max-content; margin: 0 auto;">Phun xương</P>
+                </div>
+              </a>
+            </div>
+            <div class="featured-item">
+              <a href="#nd" onclick="openCl(4)" title="Nhỏ giọt">
+                <div class="box-df">
+                  <div class="icon">
+                    <img
+                      src="drop.png"
+                    />
+                  </div>
+                  Nhỏ giọt
+                </div>
+              </a>
+            </div>
+            <!-- <div class="featured-item">
+              <a href="#toilet" onclick="openCl(5)" title="Phòng vệ sinh">
+                <div class="box-df">
+                  <div class="icon">
+                    <img
+                      src="https://img.icons8.com/color/48/000000/toilet-room.png"
+                    />
+                  </div>
+                  Phòng Vệ Sinh
+                </div>
+              </a>
+            </div> -->
+            <!-- <div class="featured-item">
+              <a href="#lobby" onclick="openCl(6)" title="Hành lang">
+                <div class="box-df">
+                  <div class="icon">
+                    <img
+                      src="https://img.icons8.com/fluent/48/000000/check-in-desk.png"
+                    />
+                  </div>
+                  Hành Lang
+                </div>
+              </a>
+            </div> -->
+          </div>
+          <!-- ========Module status======= -->
+          <div class="modal-lock activated" id="modal-popup-status">
+            <div class="modal-popup-header">
+              <div class="modal-popup-title">Thiết bị</div>
+            </div>
+            <div class="modal-popup-body">
+              <div class="modal-main">
+                <div class="modal-popup-body-result">
+                  <p>
+                    Trạng thái <span class="result-status">OFF</span>.
+                  </p>
+                </div>
+                <div class="block-first">
+                  <div class="modal-popup-body-status">Tự động</div>
+                  <div class="onoffswitch">
+                    <input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
+                    <label class="onoffswitch-label" for="myonoffswitch"></label>
+                </div>
+                </div>
+              </div>
+              <img src="img_garden.jpg" alt="" width="40% " class="icon-logo"/>
+            </div>
+          </div>
+          <div class="dp-flex">
+            <!-- =======Module led======== -->
+          <div class="modal-popup" id="modal-popup-living-room">
+            <div class="modal-popup-header">
+              <div class="modal-popup-title">Đèn LED</div>
+            </div>
+            <div class="modal-popup-body">
+              <div class="block-modal-one">
+                <div class="block-title">
+                  <img
+                  src="https://img.icons8.com/color/64/000000/light-on--v1.png"
+                  width="64px"
+                  height="64px"
+                />               
+                </div>
+                <div class="block-one">
+                  <!-- <div class="modal-popup-body-status">LED</div> -->
+                  <div class="onoffswitch">
+                    <input type="checkbox" class="onoffswitch-checkbox2" id="myonoffswitch2" name="stLed">
+                    <label class="onoffswitch-label2" for="myonoffswitch2"></label>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ========Module ps========= -->
+          <div class="modal-popup" id="modal-popup-bedroom">
+            <div class="modal-popup-header">
+              <div class="modal-popup-title">Phun Xương</div>
+            </div>
+            <div class="modal-popup-body">
+              <div class="block-modal-one">
+                <div class="block-title">
+                  <img
+                  src="watering-plants.png"
+                  width="64px"
+                  height="64px"
+                />
+               
+                </div>
+                <div class="block-one">
+                  <div class="onoffswitch">
+                    <input type="checkbox" class="onoffswitch-checkbox4" id="myonoffswitch4" name="stPS">
+                    <label class="onoffswitch-label4" for="myonoffswitch4"></label>
+                </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+          <!-- =======Module nd======== -->
+          <div class="modal-popup" id="modal-popup-kitchen">
+            <div class="modal-popup-header">
+              <div class="modal-popup-title">Nhỏ giọt</div>
+            </div>
+            <div class="modal-popup-body">
+              <div class="block-modal-one" style="width:100%;">
+                <div class="block-title">
+                  <img
+                  src="drop.png"
+                  width="64px"
+                  height="64px"
+                />                
+                </div>
+                <div class="block-one">
+                  <div class="onoffswitch">
+                    <input type="checkbox" class="onoffswitch-checkbox6" id="myonoffswitch6" name="stND">
+                    <label class="onoffswitch-label6" for="myonoffswitch6"></label>
+                </div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+          
+          </div>
+          
+        </div>
+      </div>
+      <!-- =================== -->
+      <footer class="main-footer">
+        <strong
+          >Copyright &copy; 2021
+          <a href="/main.html">Design by Nam Nguyen</a>.</strong
+        >
+        All rights reserved.
+      </footer>
+    </div>
+    <!-- Plugins -->
+    <script
+      src="assets/plugins/jQuery/jquery-1.12.4.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- jquery-ui -->
+    <script
+      src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="assets/bootstrap/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- lobipanel -->
+    <script
+      src="assets/plugins/lobipanel/lobipanel.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Pace js -->
+    <script
+      src="assets/plugins/pace/pace.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- SlimScroll -->
+    <script
+      src="assets/plugins/slimScroll/jquery.slimscroll.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- FastClick -->
+    <script
+      src="assets/plugins/fastclick/fastclick.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- CRMadmin frame -->
+    <script src="assets/dist/js/custom.js" type="text/javascript"></script>
+    <script src="assets/dist/js/dashboard.js" type="text/javascript"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <!-- connect -->
+    <script src="js/connect.js"></script>
+    <script src="js/control.js"></script>
+  </body>
+</html>
