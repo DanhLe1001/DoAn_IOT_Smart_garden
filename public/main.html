@@ -155,8 +155,8 @@
               <a
                 id="openModal"
                 href="#status"
-                onclick="openCl(1)"
-                title="Device status"
+                
+                title="Automation status"
               >
                 <div class="box-df">
                   <div class="icon">
@@ -164,12 +164,17 @@
                       src="https://img.icons8.com/fluent/48/000000/high-connection.png"
                     />
                   </div>
-                  <p>Device</p>
+                  <div class="block-one">
+                    <div class="onoffswitch">
+                      <input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
+                      <label class="onoffswitch-label" for="myonoffswitch"></label>
+                  </div>
+                  </div>
                 </div>
               </a>
             </div>
             <div class="featured-item">
-              <a href="#pk" onclick="openCl(2)" title="Phòng Khách">
+              <a href="#pk" title="LED">
                 <div class="box-df">
                   <div class="icon">
                     <img
@@ -178,31 +183,48 @@
                   height="64px"
                 />
                   </div>
-                  Đèn
+                  <div class="block-one">
+                    <!-- <div class="modal-popup-body-status">LED</div> -->
+                    <div class="onoffswitch">
+                      <input type="checkbox" class="onoffswitch-checkbox2" id="myonoffswitch2" name="stLed">
+                      <label class="onoffswitch-label2" for="myonoffswitch2"></label>
+                  </div>
+                  </div>
                 </div>
               </a>
             </div>
             <div class="featured-item">
-              <a href="#ps" title="Phòng ngủ" onclick="openCl(3)">
+              <a href="#ps" title="Phun Xương" >
                 <div class="box-df">
                   <div class="icon">
                     <img
                       src="watering-plants.png" width="64px" height="64px"
                     />
                   </div>
-                  <P style="width:max-content; margin: 0 auto;">Phun xương</P>
+                  <!-- <P style="width:max-content; margin: 0 auto;">Phun xương</P> -->
+                  <div class="block-one">
+                    <div class="onoffswitch">
+                      <input type="checkbox" class="onoffswitch-checkbox4" id="myonoffswitch4" name="stPS">
+                      <label class="onoffswitch-label4" for="myonoffswitch4"></label>
+                  </div>
+                  </div>
                 </div>
               </a>
             </div>
             <div class="featured-item">
-              <a href="#nd" onclick="openCl(4)" title="Nhỏ giọt">
+              <a href="#nd" title="Nhỏ giọt">
                 <div class="box-df">
                   <div class="icon">
                     <img
                       src="drop.png"
                     />
                   </div>
-                  Nhỏ giọt
+                  <div class="block-one">
+                    <div class="onoffswitch">
+                      <input type="checkbox" class="onoffswitch-checkbox6" id="myonoffswitch6" name="stND">
+                      <label class="onoffswitch-label6" for="myonoffswitch6"></label>
+                  </div>
+                  </div>
                 </div>
               </a>
             </div>
@@ -234,24 +256,26 @@
           <!-- ========Module status======= -->
           <div class="modal-lock activated" id="modal-popup-status">
             <div class="modal-popup-header">
-              <div class="modal-popup-title">Thiết bị</div>
+              <div class="modal-popup-title">Tổng quan</div>
             </div>
             <div class="modal-popup-body">
-              <div class="modal-main">
-                <div class="modal-popup-body-result">
+              <p style="text-transform: uppercase; text-align: center; font-size:21px; font-family: 'Roboto', sans-serif; color:#0071c3">Hệ thống quản lý tự động chăm sóc vườn thanh long</p>
+              <div style="display:flex; justify-content: space-between;">
+                <div class="modal-main"><br><br>
+                  <p style="text-align: center;font-size: medium; font-size: 25px;">Chức năng:</p><br>
                   <p>
-                    Trạng thái <span class="result-status">OFF</span>.
+                    <u>1. Bật/tắt LED</u></br>
+                    <u>2. Bật/tắt Phun Xương</u></br>
+                    <u>3. Bật/tắt Nhỏ giọt</u></br>
+                    <u>4. Chế độ tự động chăm sóc như sau:</u></br>
+                    Khi nhiệt độ >= 30 	&deg;C thì bật máy bơm phun xương,</br>
+                      khi <= 20 	&deg;C tắt máy bơm phun xương. </br>
+                    Khi độ ẩm đất <= 55 % thì bật máy bơm nhỏ giọt, </br>
+                    khi >= 75 % tắt máy bơm nhỏ giọt.</br>
                   </p>
                 </div>
-                <div class="block-first">
-                  <div class="modal-popup-body-status">Tự động</div>
-                  <div class="onoffswitch">
-                    <input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
-                    <label class="onoffswitch-label" for="myonoffswitch"></label>
-                </div>
-                </div>
+                <img src="img_garden.jpg" alt="" width="40% " class="icon-logo"/>
               </div>
-              <img src="img_garden.jpg" alt="" width="40% " class="icon-logo"/>
             </div>
           </div>
           <div class="dp-flex">
