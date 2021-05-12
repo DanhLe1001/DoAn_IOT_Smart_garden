@@ -7,14 +7,15 @@ gas.on("child_added", function (sanp) {
 
 //var nameType = $.fn.dataTable.absoluteOrderNumber({value: 'Unknown', position: 'top'});
 
-
 const table = $("#example2").DataTable({
+  dom: "Bfrtip",
+  buttons: ["copy", "csv", "excel", "pdf", "print"],
   lengthMenu: [10, 20, 30, 50, 100],
   pagingType: "full_numbers",
-//   columnDefs: [
-//     { targets: 0, type: nameType }
-// ]
-  "order": [[ 3, "desc" ]]
+  //   columnDefs: [
+  //     { targets: 0, type: nameType }
+  // ]
+  order: [[3, "desc"]],
 });
 
 $("#example2 tbody").on("click", "tr", function () {

@@ -60,6 +60,7 @@
     <!-- Close preloader -->
 
     <div class="wrapper">
+      
       <header class="main-header">
         <!-- Logo -->
         <a href="main.html" class="logo">
@@ -147,12 +148,42 @@
           </ul>
         </div>
       </aside>
+      <!-- ==========demo modal========== -->
+      <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
       <!-- ==================== -->
       <div class="content-wrapper">        
         <div class="content">
           <!-- class auto -->
           <div class="featured">
             <div class="featured-item">
+              
               <a
                 id="openModal"
                 href="#status"
@@ -167,7 +198,7 @@
                   </div>
                   <div class="block-one">
                     <div class="onoffswitch">
-                      <input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
+                      <input type="checkbox" data-mdb-toggle="modal" data-mdb-target="#exampleModal" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
                       <label class="onoffswitch-label" for="myonoffswitch"></label>
                   </div>
                   </div>
@@ -198,7 +229,7 @@
             <!-- class px -->
             <div class="featured-item">
               <a href="#ps" title="Phun Xương" >
-                <div class="box-df" id="hidden-ps">
+                <div class="box-df-ps">
                   <div class="icon">
                     <img
                       src="watering-plants.png" width="64px" height="64px"
@@ -217,7 +248,7 @@
             <!-- class nho giot -->
             <div class="featured-item">
               <a href="#nd" title="Nhỏ giọt">
-                <div class="box-df" id="hidden-nd">
+                <div class="box-df-nd">
                   <div class="icon">
                     <img
                       src="drop.png"
@@ -257,35 +288,10 @@
               </a>
             </div> -->
           </div>
-          <!-- ========Module status======= -->
-          <div class="modal-lock" id="modal-popup-status">
-            <div class="modal-popup-header">
-              <div class="modal-popup-title">Tổng quan</div>
-            </div>
-            <div class="modal-popup-body">
-              <p style="text-transform: uppercase; text-align: center; font-size:21px; font-family: 'Roboto', sans-serif; color:#0071c3">Hệ thống quản lý tự động chăm sóc vườn thanh long</p>
-              <div style="display:flex; justify-content: space-between;">
-                <div class="modal-main"><br><br>
-                  <p style="text-align: center;font-size: medium; font-size: 25px;">Chức năng:</p><br>
-                  <p>
-                    <u>1. Bật/tắt LED</u></br>
-                    <u>2. Bật/tắt Phun Xương</u></br>
-                    <u>3. Bật/tắt Nhỏ giọt</u></br>
-                    <u>4. Chế độ tự động chăm sóc như sau:</u></br>
-                    Khi nhiệt độ >= 30 	&deg;C thì bật máy bơm phun xương,</br>
-                      khi <= 20 	&deg;C tắt máy bơm phun xương. </br>
-                    Khi độ ẩm đất <= 55 % thì bật máy bơm nhỏ giọt, </br>
-                    khi >= 75 % tắt máy bơm nhỏ giọt.</br>
-                  </p>
-                </div>
-                <img src="img_garden.jpg" alt="" width="40% " class="icon-logo"/>
-              </div>
-            </div>
-          </div>
           <!-- ========Module status new design======= -->
           <div class="modal-lock activated" id="modal-popup-status">
             <div class="grid-item">
-              <img src="dragon_fruit-demo.jpg" alt="">
+              <img src="dragon_fruit-demo.jpg" alt="" width="100%">
             </div>
             <div class="grid-item">
              

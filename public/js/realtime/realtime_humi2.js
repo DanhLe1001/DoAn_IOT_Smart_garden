@@ -34,7 +34,7 @@ db.ref(`DHT/data`)
     var layout = {
       yaxis: {
         title: {
-          text: 'Temperature',
+          text: 'Temperature (&#186;C)',
           font: {
             family: 'Courier New, monospace',
             size: 18,
@@ -85,42 +85,14 @@ db.ref(`DHT/data`)
     var layout2 = {
       yaxis: {
         title: {
-          text: 'Humidity',
+          text: 'Humidity (%)',
           font: {
             family: 'Courier New, monospace',
             size: 18,
             color: '#7f7f7f'
           }
         }
-      },
-      shapes: [
-        {
-          type: "line",
-          xref: "paper",
-          x0: 0,
-          y0: 75.0,
-          x1: 1,
-          y1: 75.0,
-          line: {
-            color: "rgb(255, 0, 0)",
-            width: 2,
-            dash: "lines",
-          },
-        },
-        {
-          type: "line",
-          xref: "paper",
-          x0: 0,
-          y0: 55.0,
-          x1: 1,
-          y1: 55.0,
-          line: {
-            color: "rgb(12, 138, 12)",
-            width: 2,
-            dash: "lines",
-          },
-        },
-      ],
+      }
     };
     let humidityData = []; // last plotly object to build
     humidityData.push(humidityTraces);

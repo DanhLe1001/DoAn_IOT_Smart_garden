@@ -16,20 +16,25 @@ $(document).ready(function () {
       $("#myonoffswitch").attr("checked", "checked");
       $("#myonoffswitch4").attr("disabled", "disabled");
       $("#myonoffswitch6").attr("disabled", "disabled");
-      document.getElementById("hidden-nd").classList.toggle("actived");
-      document.getElementById("hidden-ps").classList.toggle("actived");
-    } else {
+      $(".box-df-nd").css({
+        filter: "grayscale(1)brightness(0.9)",
+        transition: "filter 0.2s ease-in",
+      });
+      $(".box-df-ps").css({
+        filter: "grayscale(1)brightness(0.9)",
+        transition: "filter 0.2s ease-in",
+      });
+    } else if (statusAuto == "OFF") {
       $("#myonoffswitch").prop("checked", false);
       $("#myonoffswitch4").attr("disabled", false);
       $("#myonoffswitch6").attr("disabled", false);
-      document.getElementById("hidden-nd").classList.remove("actived");
-      document.getElementById("hidden-ps").classList.remove("actived");
-
+      $(".box-df-nd").css({ filter: "", transition: "" });
+      $(".box-df-ps").css({ filter: "", transition: "" });
     }
     if (statusLED == "ON") {
-      $("#myonoffswitch2").attr("checked", "checked");
+      document.getElementById("myonoffswitch2").checked = true;
     } else {
-      $("#myonoffswitch2").prop("checked", false);
+      document.getElementById("myonoffswitch2").checked = false;
     }
 
     if (statusPS == "ON") {
@@ -44,7 +49,6 @@ $(document).ready(function () {
       $("#myonoffswitch6").prop("checked", false);
     }
   });
-
   return Promise.all([updata_firebase()]);
 });
 

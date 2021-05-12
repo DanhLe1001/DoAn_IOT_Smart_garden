@@ -6,6 +6,8 @@ logDHT.on("child_added", function (sanp) {
   $("#content2").text(sanp.val().humi + " %");
 });
 const table = $("#example2").DataTable({
+  dom: "Bfrtip",
+  buttons: ["copy", "csv", "excel", "pdf", "print"],
   lengthMenu: [
     [10, 25, 50, -1],
     [10, 25, 50, "All"],
@@ -69,12 +71,12 @@ function drawToTable(motionData) {
       const temperature = motionData[key].temp;
       const timestamp = motionData[key].time;
 
-      const date2=new Date(timestamp);
+      const date2 = new Date(timestamp);
 
       var day = date2.getDate();
       var month = date2.getMonth(); //Be careful! January is 0 not 1
       var year = date2.getFullYear();
-      var dateString = day + "/" +(month + 1) + "/" + year;
+      var dateString = day + "/" + (month + 1) + "/" + year;
       var timeString = displayTime(timestamp);
       updatedData.push([
         counter,
