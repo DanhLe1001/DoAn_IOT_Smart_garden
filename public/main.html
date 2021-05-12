@@ -148,8 +148,9 @@
         </div>
       </aside>
       <!-- ==================== -->
-      <div class="content-wrapper">
+      <div class="content-wrapper">        
         <div class="content">
+          <!-- class auto -->
           <div class="featured">
             <div class="featured-item">
               <a
@@ -173,6 +174,7 @@
                 </div>
               </a>
             </div>
+            <!-- class LED -->
             <div class="featured-item">
               <a href="#pk" title="LED">
                 <div class="box-df">
@@ -193,9 +195,10 @@
                 </div>
               </a>
             </div>
+            <!-- class px -->
             <div class="featured-item">
               <a href="#ps" title="Phun Xương" >
-                <div class="box-df">
+                <div class="box-df" id="hidden-ps">
                   <div class="icon">
                     <img
                       src="watering-plants.png" width="64px" height="64px"
@@ -211,15 +214,16 @@
                 </div>
               </a>
             </div>
+            <!-- class nho giot -->
             <div class="featured-item">
               <a href="#nd" title="Nhỏ giọt">
-                <div class="box-df">
+                <div class="box-df" id="hidden-nd">
                   <div class="icon">
                     <img
                       src="drop.png"
                     />
                   </div>
-                  <div class="block-one">
+                  <div class="block-one" >
                     <div class="onoffswitch">
                       <input type="checkbox" class="onoffswitch-checkbox6" id="myonoffswitch6" name="stND">
                       <label class="onoffswitch-label6" for="myonoffswitch6"></label>
@@ -254,7 +258,7 @@
             </div> -->
           </div>
           <!-- ========Module status======= -->
-          <div class="modal-lock activated" id="modal-popup-status">
+          <div class="modal-lock" id="modal-popup-status">
             <div class="modal-popup-header">
               <div class="modal-popup-title">Tổng quan</div>
             </div>
@@ -278,6 +282,17 @@
               </div>
             </div>
           </div>
+          <!-- ========Module status new design======= -->
+          <div class="modal-lock activated" id="modal-popup-status">
+            <div class="grid-item">
+              <img src="dragon_fruit-demo.jpg" alt="">
+            </div>
+            <div class="grid-item">
+             
+              <!-- <img src="dragon_fruit.jpg" alt="" class="logo-fruit"> -->
+            </div>
+          </div>
+          
           <div class="dp-flex">
             <!-- =======Module led======== -->
           <div class="modal-popup" id="modal-popup-living-room">
@@ -355,7 +370,7 @@
           
           </div>
           
-        </div>
+        </div>       
       </div>
       <!-- =================== -->
       <footer class="main-footer">

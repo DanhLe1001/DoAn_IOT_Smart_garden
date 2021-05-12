@@ -70,7 +70,7 @@ body {
   display: none;
   background-color: rgb(255, 255, 255);
   min-height: 20px;
-  padding: 10px;
+  padding: 0 0;
   margin-bottom: 15px;
   border-radius: 4px !important;
   z-index: 9999;
@@ -85,7 +85,7 @@ body {
 .modal-main {
   height: fit-content;
   /* font-family: 'Courier New', Courier, monospace; */
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-size: initial;
   /* transform: translate(4%, 0%); */
 }
@@ -95,10 +95,19 @@ body {
   animation: dropdown 0.3s ease forwards;
 }
 .modal-lock.activated {
-  display: block;
+  display: grid;
+  grid-template-columns: auto auto;
   top: -500px;
   animation: dropdown 0.3s ease forwards;
 }
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center; */
+}
+
 #display-light-on {
   display: none;
 }
@@ -115,9 +124,14 @@ body {
   display: block;
 }
 @keyframes dropdown {
-  0%{}
-  70% {transform: translateY(20px)}
-  100% {transform: translateY(5px)}
+  0% {
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 .modal-popup-header {
   padding: 10px 15px;
@@ -134,7 +148,6 @@ body {
   /* display: flex; */
   /* justify-content: space-between; */
   padding: 10px 15px;
-
 }
 .modal-popup-body > p {
   font-size: 14px;
@@ -198,7 +211,7 @@ body {
   height: 98px;
 }
 .block-modal-one {
-    width: 50%;
+  width: 50%;
 }
 .onoffswitch {
   position: relative;
@@ -268,7 +281,7 @@ body {
 .onoffswitch-checkbox8:checked + .onoffswitch-label8 {
   background-color: #49e845;
 }
-.onoffswitch-checkbox:checked + .onoffswitch-label, 
+.onoffswitch-checkbox:checked + .onoffswitch-label,
 .onoffswitch-checkbox2:checked + .onoffswitch-label2,
 .onoffswitch-checkbox3:checked + .onoffswitch-label3,
 .onoffswitch-checkbox4:checked + .onoffswitch-label4,
@@ -296,7 +309,31 @@ body {
 .onoffswitch-checkbox8:checked + .onoffswitch-label8:before {
   right: 0px;
 }
-
+.logo-fruit {
+  width: 100%;
+  height: 100%;
+  /* background-position: top center;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  max-height: 1600px;
+  align-items: center;
+  background-size: cover; */
+}
+.content-fruit {
+  width: 100%;
+  background-color: #0071c3;
+}
+.actived {
+  /* background-color: #e6e6e6;
+  filter: grayscale(1) invert(1); */
+  /* opacity: 32%; */
+  
+  filter: grayscale(1)brightness(0.9);
+  transition: filter 0.2s ease-in;
+}
 /*----End design nam---*/
 .wrapper {
   min-height: 100%;
@@ -366,7 +403,7 @@ body {
 .right-side {
   min-height: 100%;
   z-index: 800;
-  background-color: #cac6c6;
+  background-color: #f7f7f7;
 }
 .main-footer {
   background: #dedede;
@@ -419,7 +456,7 @@ body.hold-transition .main-header .logo {
   margin-right: auto;
   margin-left: auto;
   padding: 0 30px 10px;
-  background: #cac6c6; /*e7ecf0*/
+  background: #f7f7f7; /*e7ecf0*/
   padding-top: 20px;
 }
 @media (max-width: 767px) {
@@ -1003,7 +1040,6 @@ a.sidebar-toggle .pe-7s-angle-left-circle {
 @media (max-width: 767px) {
   .main-header .logo {
     background-color: rgb(234 234 234);
-    
   }
   .icon-logo {
     display: none;
@@ -1014,13 +1050,27 @@ a.sidebar-toggle .pe-7s-angle-left-circle {
   .box-df {
     /* max-height: 100px; */
   }
-  .onoffswitch-label, .onoffswitch-label2, .onoffswitch-label3, .onoffswitch-label4, .onoffswitch-label5, .onoffswitch-label6, .onoffswitch-label7, .onoffswitch-label8 {
-    height:25px;
+  .onoffswitch-label,
+  .onoffswitch-label2,
+  .onoffswitch-label3,
+  .onoffswitch-label4,
+  .onoffswitch-label5,
+  .onoffswitch-label6,
+  .onoffswitch-label7,
+  .onoffswitch-label8 {
+    height: 25px;
     width: 60px;
   }
-  .onoffswitch-label:before, .onoffswitch-label2:before, .onoffswitch-label3:before, .onoffswitch-label4:before, .onoffswitch-label5:before, .onoffswitch-label6:before, .onoffswitch-label7:before, .onoffswitch-label8:before {
+  .onoffswitch-label:before,
+  .onoffswitch-label2:before,
+  .onoffswitch-label3:before,
+  .onoffswitch-label4:before,
+  .onoffswitch-label5:before,
+  .onoffswitch-label6:before,
+  .onoffswitch-label7:before,
+  .onoffswitch-label8:before {
     width: 24px;
-    height:24px;
+    height: 24px;
     position: absolute;
     right: 35px;
   }
