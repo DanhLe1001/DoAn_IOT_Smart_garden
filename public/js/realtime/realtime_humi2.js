@@ -28,17 +28,101 @@ db.ref(`DHT/data`)
       x: timestamps,
       y: temperatures,
       name: "DHT11",
+      mode: "lines+markers",
+      type: "scatter",
+    };
+    var layout = {
+      yaxis: {
+        title: {
+          text: 'Temperature',
+          font: {
+            family: 'Courier New, monospace',
+            size: 18,
+            color: '#7f7f7f'
+          }
+        }
+      },
+      shapes: [
+        {
+          type: "line",
+          xref: "paper",
+          x0: 0,
+          y0: 30.0,
+          x1: 1,
+          y1: 30.0,
+          line: {
+            color: "rgb(255, 0, 0)",
+            width: 2,
+            dash: "lines",
+          },
+        },
+        {
+          type: "line",
+          xref: "paper",
+          x0: 0,
+          y0: 20.0,
+          x1: 1,
+          y1: 20.0,
+          line: {
+            color: "rgb(12, 138, 12)",
+            width: 2,
+            dash: "lines",
+          },
+        },
+      ],
     };
     let temperatureData = []; // last plotly object to build
     temperatureData.push(temperatureTraces);
-    Plotly.newPlot(temperaturePlotDiv, temperatureData);
+    Plotly.newPlot(temperaturePlotDiv, temperatureData, layout);
 
     let humidityTraces = {
       x: timestamps,
       y: humidities,
       name: "DHT11",
+      mode: "lines+markers",
+      type: "scatter",
+    };
+    var layout2 = {
+      yaxis: {
+        title: {
+          text: 'Humidity',
+          font: {
+            family: 'Courier New, monospace',
+            size: 18,
+            color: '#7f7f7f'
+          }
+        }
+      },
+      shapes: [
+        {
+          type: "line",
+          xref: "paper",
+          x0: 0,
+          y0: 75.0,
+          x1: 1,
+          y1: 75.0,
+          line: {
+            color: "rgb(255, 0, 0)",
+            width: 2,
+            dash: "lines",
+          },
+        },
+        {
+          type: "line",
+          xref: "paper",
+          x0: 0,
+          y0: 55.0,
+          x1: 1,
+          y1: 55.0,
+          line: {
+            color: "rgb(12, 138, 12)",
+            width: 2,
+            dash: "lines",
+          },
+        },
+      ],
     };
     let humidityData = []; // last plotly object to build
     humidityData.push(humidityTraces);
-    Plotly.newPlot(humidityPlotDiv, humidityData);
+    Plotly.newPlot(humidityPlotDiv, humidityData, layout2);
   });
