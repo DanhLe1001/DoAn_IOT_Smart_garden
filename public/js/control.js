@@ -13,7 +13,7 @@ $(document).ready(function () {
     console.log("statusAuto: " + statusAuto);
 
     if (statusAuto == "ON") {
-      $("#myonoffswitch").attr("checked", "checked");
+      document.getElementById("myonoffswitch").checked = true;
       $("#myonoffswitch4").attr("disabled", "disabled");
       $("#myonoffswitch6").attr("disabled", "disabled");
       $(".box-df-nd").css({
@@ -24,8 +24,8 @@ $(document).ready(function () {
         filter: "grayscale(1)brightness(0.9)",
         transition: "filter 0.2s ease-in",
       });
-    } else if (statusAuto == "OFF") {
-      $("#myonoffswitch").prop("checked", false);
+    } else {
+      document.getElementById("myonoffswitch").checked = false;
       $("#myonoffswitch4").attr("disabled", false);
       $("#myonoffswitch6").attr("disabled", false);
       $(".box-df-nd").css({ filter: "", transition: "" });
@@ -38,15 +38,15 @@ $(document).ready(function () {
     }
 
     if (statusPS == "ON") {
-      $("#myonoffswitch4").attr("checked", "checked");
+      document.getElementById("myonoffswitch4").checked = true;
     } else {
-      $("#myonoffswitch4").prop("checked", false);
+      document.getElementById("myonoffswitch4").checked = false;
     }
 
     if (statusND == "ON") {
-      $("#myonoffswitch6").attr("checked", "checked");
+      document.getElementById("myonoffswitch6").checked = true;
     } else {
-      $("#myonoffswitch6").prop("checked", false);
+      document.getElementById("myonoffswitch6").checked = false;
     }
   });
   return Promise.all([updata_firebase()]);
