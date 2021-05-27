@@ -14,11 +14,12 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link
       href="assets/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
     <link
       href="assets/plugins/lobipanel/lobipanel.min.css"
       rel="stylesheet"
@@ -148,35 +149,6 @@
           </ul>
         </div>
       </aside>
-      <!-- ==========demo modal========== -->
-      <div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-mdb-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-          Close
-        </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
       <!-- ==================== -->
       <div class="content-wrapper">        
         <div class="content">
@@ -191,14 +163,14 @@
                 title="Automation status"
               >
                 <div class="box-df">
-                  <div class="icon">
-                    <img
-                      src="https://img.icons8.com/fluent/48/000000/high-connection.png"
-                    />
+                  <div style="border-bottom: 2px solid #eee;">
+                    <p class="title-featured">Tự động</p>
                   </div>
+                  <div class="icon">
+                    <img src="https://img.icons8.com/fluent/62/000000/update-left-rotation.png"/>                  </div>
                   <div class="block-one">
                     <div class="onoffswitch">
-                      <input type="checkbox" data-mdb-toggle="modal" data-mdb-target="#exampleModal" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
+                      <input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" name="auto">
                       <label class="onoffswitch-label" for="myonoffswitch"></label>
                   </div>
                   </div>
@@ -207,8 +179,10 @@
             </div>
             <!-- class LED -->
             <div class="featured-item">
-              <a href="#pk" title="LED">
                 <div class="box-df">
+                  <div style="border-bottom: 2px solid #eee;">
+                    <p class="title-featured">LED</p>
+                  </div>
                   <div class="icon">
                     <img
                   src="https://img.icons8.com/color/64/000000/light-on--v1.png"
@@ -224,12 +198,13 @@
                   </div>
                   </div>
                 </div>
-              </a>
             </div>
             <!-- class px -->
             <div class="featured-item">
-              <a href="#ps" title="Phun Xương" >
                 <div class="box-df-ps">
+                  <div style="border-bottom: 2px solid #eee;">
+                    <p class="title-featured">Phun Xương</p>
+                  </div>
                   <div class="icon">
                     <img
                       src="watering-plants.png" width="64px" height="64px"
@@ -243,12 +218,13 @@
                   </div>
                   </div>
                 </div>
-              </a>
             </div>
             <!-- class nho giot -->
             <div class="featured-item">
-              <a href="#nd" title="Nhỏ giọt">
                 <div class="box-df-nd">
+                  <div style="border-bottom: 2px solid #eee;">
+                    <p class="title-featured">Nhỏ giọt</p>
+                  </div>
                   <div class="icon">
                     <img
                       src="drop.png"
@@ -261,32 +237,7 @@
                   </div>
                   </div>
                 </div>
-              </a>
             </div>
-            <!-- <div class="featured-item">
-              <a href="#toilet" onclick="openCl(5)" title="Phòng vệ sinh">
-                <div class="box-df">
-                  <div class="icon">
-                    <img
-                      src="https://img.icons8.com/color/48/000000/toilet-room.png"
-                    />
-                  </div>
-                  Phòng Vệ Sinh
-                </div>
-              </a>
-            </div> -->
-            <!-- <div class="featured-item">
-              <a href="#lobby" onclick="openCl(6)" title="Hành lang">
-                <div class="box-df">
-                  <div class="icon">
-                    <img
-                      src="https://img.icons8.com/fluent/48/000000/check-in-desk.png"
-                    />
-                  </div>
-                  Hành Lang
-                </div>
-              </a>
-            </div> -->
           </div>
           <!-- ========Module status new design======= -->
           <div class="modal-lock activated" id="modal-popup-status">
@@ -388,20 +339,22 @@
       </footer>
     </div>
     <!-- Plugins -->
-    <script
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script
       src="assets/plugins/jQuery/jquery-1.12.4.min.js"
       type="text/javascript"
-    ></script>
+    ></script> -->
     <!-- jquery-ui -->
     <script
       src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js"
       type="text/javascript"
     ></script>
     <!-- Bootstrap -->
-    <script
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script
       src="assets/bootstrap/js/bootstrap.min.js"
       type="text/javascript"
-    ></script>
+    ></script> -->
     <!-- lobipanel -->
     <script
       src="assets/plugins/lobipanel/lobipanel.min.js"

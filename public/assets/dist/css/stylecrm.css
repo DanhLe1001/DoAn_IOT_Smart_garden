@@ -18,6 +18,17 @@ body {
 }
 /*--- Layout ---*/
 /*----design nam---*/
+.title-featured {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #667580;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .featured {
   display: flex;
   margin-left: -7.5px;
@@ -32,11 +43,13 @@ body {
   padding-left: 7.5px;
   padding-right: 7.5px;
 }
-.box-df, .box-df-nd, .box-df-ps {
+.box-df,
+.box-df-nd,
+.box-df-ps {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #fff;
   min-height: 20px;
-  max-height: 145px;
+  /* max-height: 180px; */
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 4px !important;
@@ -319,8 +332,8 @@ body {
   width: 100%;
   background-color: #0071c3;
 }
-.hidden-item { 
-  filter: grayscale(1)brightness(0.9);
+.hidden-item {
+  filter: grayscale(1) brightness(0.9);
   transition: filter 0.2s ease-in;
 }
 /*----End design nam---*/

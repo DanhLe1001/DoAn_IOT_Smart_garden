@@ -42,7 +42,6 @@ $(document).ready(function () {
     } else {
       document.getElementById("myonoffswitch4").checked = false;
     }
-
     if (statusND == "ON") {
       document.getElementById("myonoffswitch6").checked = true;
     } else {
