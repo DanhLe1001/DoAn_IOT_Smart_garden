@@ -47,9 +47,9 @@ db.ref(`DHT/data`)
           type: "line",
           xref: "paper",
           x0: 0,
-          y0: 30.0,
+          y0: 35.0,
           x1: 1,
-          y1: 30.0,
+          y1: 35.0,
           line: {
             color: "rgb(255, 0, 0)",
             width: 2,
