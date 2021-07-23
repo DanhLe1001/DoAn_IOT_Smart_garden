@@ -4209,7 +4209,7 @@
         };
       }(idx);
       context.memo('help.formatH'+idx, lang.help['formatH' + idx]);
-    };
+    }
     /* jshint ignore:end */
 
     /**
