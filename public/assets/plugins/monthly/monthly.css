@@ -33,7 +33,7 @@
     text-decoration: none;
     height: 1.75em;
     line-height: 1.65em;
-    padding: 0 0.65em 0 0.65em;
+    padding: 0 0.65em;
     box-sizing: border-box;
     transition: background .1s;
 }
@@ -132,7 +132,7 @@
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #EBEBEB;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     font-weight: 600;
     font-size: 12px;
 }
@@ -404,7 +404,7 @@ establish the rules based on the calendar element width rather than the device w
     }
     .monthly-day .monthly-event-indicator {
         display: block;
-        margin: 0 0 1px 0;
+        margin: 0 0 1px;
         width: auto;
         height: 1.5em;
         line-height: 1.2em;
